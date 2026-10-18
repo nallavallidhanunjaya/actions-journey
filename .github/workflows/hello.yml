@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show greeting
-        run: echo "Hellow from my first workflow"
+        run: echo "Hello from my first workflow"
