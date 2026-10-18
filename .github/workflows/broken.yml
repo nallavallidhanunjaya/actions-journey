@@ -1,0 +1,10 @@
+name: site-check
+on: push
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the readme
+        run: cat README.md
+      - name: Show the Python version
+        run: pyhton3 --version
