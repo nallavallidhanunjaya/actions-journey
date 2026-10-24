@@ -12,3 +12,5 @@ jobs:
         env:
           LOG_LEVEL: debug # step level: this step only
         run: echo "$APP_NAME with log level $LOG_LEVEL"
+      - name: Test
+        run: echo "$APP_NAME with log level $LOG_LEVEL"
