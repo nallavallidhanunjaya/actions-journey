@@ -1,0 +1,14 @@
+name: Gated Deploy
+
+on: [push]
+
+jobs:
+  deploy-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "Running tests..."
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying to production..."
