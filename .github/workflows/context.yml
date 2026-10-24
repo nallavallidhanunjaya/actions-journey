@@ -1,0 +1,15 @@
+name: Print Context Values
+
+on: [push]
+
+jobs:
+  print-contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print context variables
+        run: |
+          echo "Repository Name: ${{ github.repository }}"
+          echo "Branch Name: ${{ github.ref_name }}"
+          echo "Commit ID: ${{ github.sha }}"
+          echo "Event Name: ${{ github.event_name }}"
+          echo "Runner OS: ${{ runner.os }}"
