@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run linter
+        run: echo "Running linter..."
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit tests
+        run: echo "Running unit tests..."
+
+  package:
+    needs: [lint, unit-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Package artifacts
+        run: echo "Packaging application..."
