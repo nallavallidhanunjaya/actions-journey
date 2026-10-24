@@ -1,0 +1,14 @@
+name: env-demo
+on: push
+env:
+  APP_NAME: journey        # workflow level: every job sees it
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: info      # job level: every step in this job
+    steps:
+      - name: Verbose step
+        env:
+          LOG_LEVEL: debug # step level: this step only
+        run: echo "$APP_NAME with log level $LOG_LEVEL"
