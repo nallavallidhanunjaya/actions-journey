@@ -1,0 +1,8 @@
+name: EnvTest
+on: [push]
+jobs:
+  Test-Env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the target region
+        run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"
