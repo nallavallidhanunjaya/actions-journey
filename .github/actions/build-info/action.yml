@@ -1,7 +1,7 @@
-name: 'Build Info'
+name: build-info
 description: 'Prints branch and commit information'
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - name: Print branch
       shell: bash
