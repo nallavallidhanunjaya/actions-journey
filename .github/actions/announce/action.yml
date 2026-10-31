@@ -9,4 +9,5 @@ runs:
   steps:
     - name: Echo app name
       shell: bash
-      run: 'echo "Building app: ${{ inputs.app-name }}"'
+      run: |
+        echo "Building app: ${{ inputs.app-name }}"
