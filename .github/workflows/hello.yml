@@ -1,8 +1,0 @@
-name: hello
-on: push
-jobs:
-  greet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show greeting
-        run: echo "Hello from my first workflow"
