@@ -1,0 +1,12 @@
+name: 'Announce App'
+description: 'Announces the app being built'
+inputs:
+  app-name:
+    description: 'Name of the app'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Echo app name
+      shell: bash
+      run: echo "Building app: ${{ inputs.app-name }}"
